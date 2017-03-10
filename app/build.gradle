@@ -1,0 +1,167 @@
+apply plugin: 'com.android.application'
+apply plugin: 'android-apt'
+android {
+    compileSdkVersion 24
+    buildToolsVersion "23.0.1"
+    defaultConfig {
+        applicationId "com.ryx.ryx"
+
+        minSdkVersion 15 //支持最小的sdk版本
+        targetSdkVersion 23 //目标sdk版本
+        versionCode 1//代码版本号
+        versionName "0.0.1" //版本名称
+        multiDexEnabled true
+
+        ndk {
+            // 设置支持的 SO 库构架，注意这里要根据你的实际情况来设置
+            abiFilters 'armeabi', 'x86'
+            //'armeabi-v7a','arm64-v8a', 'x86', 'x86_64', 'mips', 'mips64'
+        }
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: applicationId,
+                JPUSH_APPKEY : "d527cd7ff5ed27875922cc6b", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    dexOptions {
+        javaMaxHeapSize "2g"
+    }
+
+    lintOptions {
+        abortOnError false //编译时屏蔽掉lint检查，可以避免由于编译条件太过严格而编译不过的问题：
+        checkReleaseBuilds false
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file("${System.properties['user.home']}/.android/debug.keystore")
+        }
+
+        release { //release版本签名信息
+
+        }
+    }
+
+
+    buildTypes {
+        debug {
+
+            buildConfigField "boolean", "LOG_DEBUG", "true" //debug开关
+            minifyEnabled false //是否进行混淆
+            //混淆文件的位置
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug //引用上面声明的devDebug签名信息
+            zipAlignEnabled true
+            shrinkResources false
+        }
+
+//        release {
+//            buildConfigField "boolean", "LOG_DEBUG", "false"
+//            minifyEnabled false //是否进行混淆
+//            //混淆文件的位置
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            signingConfig signingConfigs.release //引用上面声明的devDebug签名信息
+//            zipAlignEnabled true//Zipalign优化
+//            shrinkResources true // 移除无用的resource文件
+//        }
+    }
+
+    //打包文件名配置
+    applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            def outputFile = output.outputFile
+            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                // 输出apk名称为weiyi_android_release_v1.0_2016-01-15.apk
+                def fileName = "weiyi_android_${variant.buildType.name}_v${defaultConfig.versionName}.apk"
+                output.outputFile = new File(outputFile.parent, fileName)
+            }
+        }
+    }
+
+    dependencies {
+        compile fileTree(include: ['*.jar'], dir: 'libs')
+
+        compile project(path: ':NeoBaseLib')
+        compile 'com.jzxiang.pickerview:TimePickerDialog:1.0.1'
+        compile 'com.jakewharton:butterknife:8.2.1'
+        apt 'com.jakewharton:butterknife-compiler:8.2.1'
+        compile 'com.jude:rollviewpager:1.4.5'
+        compile 'com.github.lovetuzitong:' + 'MultiImageSelector' + ':1.2'
+        compile 'com.jpardogo.materialtabstrip:library:1.1.0'
+        compile 'info.hoang8f:fbutton:1.0.5'
+        compile 'cn.jiguang:jpush:2.1.8'
+
+        compile 'com.bigkoo:pickerview:2.1.1'
+        compile 'com.tencent.bugly:crashreport:latest.release'
+        compile 'com.tencent.bugly:nativecrashreport:latest.release'
+        compile 'com.soundcloud.android:android-crop:1.0.1@aar'
+//        //扫一扫
+//        compile 'com.journeyapps:zxing-android-embedded:2.0.1@aar'
+//
+//        compile 'com.journeyapps:zxing-android-legacy:2.0.1@aar'
+//
+//        /**zxing二维码扫描for Android核心库**/
+//        compile 'com.journeyapps:zxing-android-integration:2.0.1@aar'
+//
+//        compile 'com.google.zxing:core:3.0.1'
+        compile 'cn.yipianfengye.android:zxing-library:1.9'
+        compile 'me.relex:circleindicator:1.2.2@aar'
+        compile 'com.pgyersdk:sdk:2.4.0'
+        compile 'com.github.Yuto910928:FlowTag:v1.0'
+    }
+}
+def releaseTime() {
+    return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"))
+}
+/*******************以下是关于获取build info 相关**************************/
+def getBuildInfo() {
+    def info = [:]
+    //编译设备
+    info.put("COMPILE_DEVICE: ", System.getProperty("user.name") + "@" + InetAddress.getLocalHost().getHostName())
+    //编译时间
+    info.put("BUILD_TIME", new Date().format("yyyy-MM-dd HH:mm:ss"))
+    return info
+}
+//获取buildInfo目录
+def getBuildInfoDir() {
+    def dirs = []
+    dirs.addAll(android.sourceSets.main.assets.srcDirs)
+    def assetsDir = dirs[0].absolutePath
+    def buildInfoDir = assetsDir + "/build"
+    def f = file(buildInfoDir)
+    if (!f.exists()) {
+        f.mkdirs()
+        println '--------create new build info dir---------'
+    } else {
+        println '-------------build info dir already exits-----------------'
+    }
+
+    return assetsDir
+}
+preBuild.doFirst {
+    println '-----------Begin Gen Build Info---------------'
+
+    def assetsDir = getBuildInfoDir()
+
+    println assetsDir
+    def info = getBuildInfo()
+    def destFile = new File(new File(assetsDir), "buildInfo.txt")
+    if (!destFile.exists()) {
+        destFile.createNewFile()
+        println destFile.exists()
+    }
+    destFile.withWriter { out ->
+        info.each { key, value ->
+            println "${key}"
+            println "${value}"
+            out.writeLine("${key}=${value}")
+        }
+    }
+}

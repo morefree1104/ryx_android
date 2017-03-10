@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_333">#333333</color>
+    <color name="black_text">#333333</color>
+    <color name="color_999">#999</color>
+
+    <color name="search_box_color">#EBECF0</color>
+    <color name="red">#FF0000</color>
+    <color name="gray">#D9D9D9</color>
+    <color name="ccc">#ccc</color>
+    <color name="price_color">#FF7700</color>
+    <color name="white">#ffffffff</color>
+    <color name="blue_text">#1A92ED</color>
+    <color name="color_labe3_bg">#55000000</color><!-- 半透明黑色 -->
+    <!-- 导航栏颜色 -->
+    <color name="guide1">#00DDC6</color>
+    <color name="guide2">#985BD2</color>
+    <color name="guide3">#F6B32E</color>
+</resources>
