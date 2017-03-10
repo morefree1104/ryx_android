@@ -8,8 +8,8 @@ import android.os.Looper;
 import android.support.v7.app.AlertDialog;
 import android.util.Log;
 
-import com.android.weiyi.ui.activity.SplashActivity;
 import com.neo.duan.manager.ScreenManager;
+import com.ryx.ryx.ui.activity.MainActivity;
 
 /**
  * @author : neo.duan
@@ -61,7 +61,7 @@ public class CrashManager implements Thread.UncaughtExceptionHandler {
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
                 ScreenManager.getInstance().popAllActivity();
-                Intent intent = new Intent(topActivity, SplashActivity.class);
+                Intent intent = new Intent(topActivity, MainActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                 IntentManager.getInstance().goActivity(topActivity,intent);
                 killProcess();
