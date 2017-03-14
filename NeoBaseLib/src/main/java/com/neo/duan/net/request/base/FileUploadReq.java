@@ -11,7 +11,6 @@ public class FileUploadReq extends BaseRequest{
     private String filePath;
     public FileUploadReq(String filePath) {
         setFilePath(filePath);
-        add("Token", "888");
     }
 
     public String getFilePath() {

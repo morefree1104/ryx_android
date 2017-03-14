@@ -35,7 +35,9 @@ public abstract class BaseRequest {
     }
 
     public Map<String, Object> getParams() {
-        return handleCommonParams();
+//        return handleCommonParams();
+        //TODO 加上签名
+        return params;
     }
 
 
@@ -54,17 +56,17 @@ public abstract class BaseRequest {
         }
         commParams.put("RequestData", JSON.toJSON(params).toString().trim());
 
-        LogUtils.d(TAG, "map to json:" + JSON.toJSON(params));
+//        LogUtils.d(TAG, "map to json:" + JSON.toJSON(params));
 
         //对参数签名
-        String sign = "";
-        try {
-            //参数再拼接key
-            sign = SHA.getSHA(getParamsString(commParams)).toUpperCase();
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
-        }
-        commParams.put("Sign", sign);
+//        String sign = "";
+//        try {
+//            //参数再拼接key
+//            sign = SHA.getSHA(getParamsString(commParams)).toUpperCase();
+//        } catch (NoSuchAlgorithmException e) {
+//            e.printStackTrace();
+//        }
+//        commParams.put("Sign", sign);
         return commParams;
     }
 

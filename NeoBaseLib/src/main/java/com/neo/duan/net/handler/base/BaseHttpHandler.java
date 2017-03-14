@@ -77,22 +77,12 @@ public class BaseHttpHandler<T> implements Callback<BaseResponse> {
         }
 
         LogUtils.d(TAG,"BaseHttpHandler  onResponse---->" + response.body().toString());
-        //TODO 目前不过第三关，正式打开
-        //第三关:Nonce是否为request中Nonce
-//        if (!mRequest.getNonce().equals(resp.getNonce())) {
-//            if (mListener != null) {
-//                detailErrorMsg = BuildConfig.LOG_DEBUG ? "  Nonce不匹配" : "";
-//                mListener.onResponse(BaseHttpResponseListener.RESPONSE_FAIL,
-//                        "服务器开了点小差，请稍后再试" + detailErrorMsg, mTag);
-//            }
-//            return;
-//        }
-
         //第四关：Result是否为成功
         if (!resp.isSuccess()) {
             if (mListener != null) {
                 String msg = "服务器开了点小差，请稍后再试";
-                String errorMessage = resp.getErrorMessage();
+                //TODO  需要错误地址
+                String errorMessage = resp.getStatus();
                 if (!TextUtils.isEmpty(errorMessage)) {
                     msg = errorMessage;
                 }
@@ -108,7 +98,8 @@ public class BaseHttpHandler<T> implements Callback<BaseResponse> {
 //                detailErrorMsg = BuildConfig.LOG_DEBUG ? "  ResponseData为空" : "";
 //                mListener.onResponse(BaseHttpResponseListener.RESPONSE_FAIL,
 //                        "请求失败，请重试" + detailErrorMsg, mTag);
-                mListener.onResponse(BaseHttpResponseListener.RESPONSE_SUCCESS, resp.getMessage(), mTag);
+                //TODO
+                mListener.onResponse(BaseHttpResponseListener.RESPONSE_SUCCESS, resp.getStatus(), mTag);
             }
             return;
         }
@@ -116,11 +107,11 @@ public class BaseHttpHandler<T> implements Callback<BaseResponse> {
         //第六关：序列化的BaseIfo是否为空
         String responseData = obj.toString();
         //解密该数据
-        try {
-            responseData = DESUtils.decrypt(Constants.WEIYI_KEY, responseData);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+//        try {
+//            responseData = DESUtils.decrypt(Constants.WEIYI_KEY, responseData);
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
 
         LogUtils.d(TAG,"DES decrypt:" + responseData);
 

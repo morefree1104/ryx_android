@@ -8,57 +8,15 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @desc : 服务器返回实体基类
  */
 public class BaseResponse<T> {
-    private static final String SUCCESS = "S";
+    private static final String SUCCESS = "OK";
 
-    @JSONField(name = "Nonce")
-    private String nonce;
 
-    @JSONField(name = "Result")
-    private String result;
-
-    @JSONField(name = "ErrorCode")
-    private String errorCode;
-
-    @JSONField(name = "ErrorMessage")
-    private String errorMessage;
-
-    @JSONField(name = "message")
-    private String message;
+    @JSONField(name = "Status")
+    private String Status;
 
     @JSONField(name = "ResponseData")
     private T data;
 
-    public String getNonce() {
-        return nonce;
-    }
-
-    public void setNonce(String nonce) {
-        this.nonce = nonce;
-    }
-
-    public String getResult() {
-        return result;
-    }
-
-    public void setResult(String result) {
-        this.result = result;
-    }
-
-    public String getErrorCode() {
-        return errorCode;
-    }
-
-    public void setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-    }
-
-    public String getErrorMessage() {
-        return errorMessage;
-    }
-
-    public void setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-    }
 
     public T getData() {
         return data;
@@ -69,15 +27,15 @@ public class BaseResponse<T> {
     }
 
     public boolean isSuccess() {
-        return SUCCESS.equals(result);
+        return SUCCESS.equals(Status);
     }
 
-    public String getMessage() {
-        return message;
+    public String getStatus() {
+        return Status;
     }
 
-    public void setMessage(String message) {
-        this.message = message;
+    public void setStatus(String status) {
+        Status = status;
     }
 }
 

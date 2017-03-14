@@ -22,6 +22,7 @@ import okhttp3.Response;
 import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.fastjson.FastJsonConverterFactory;
+import retrofit2.http.DELETE;
 import retrofit2.http.FieldMap;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
@@ -29,6 +30,7 @@ import retrofit2.http.Multipart;
 import retrofit2.http.POST;
 import retrofit2.http.Part;
 import retrofit2.http.PartMap;
+import retrofit2.http.Path;
 import retrofit2.http.Url;
 
 /**
@@ -171,8 +173,8 @@ public class BaseHttpLoader {
          * @return
          */
         @FormUrlEncoded
-        @POST
-        Call<BaseResponse> sendPost(@FieldMap Map<String, Object> paramMap, @Url String url);
+        @POST("{url}")
+        Call<BaseResponse> sendPost(@FieldMap Map<String, Object> paramMap, @Path("url") String url);
 
         /**
          * 通用get请求，自己拼接带参数的请求地址
@@ -180,8 +182,16 @@ public class BaseHttpLoader {
          * @param url
          * @return
          */
-        @GET
-        Call<BaseResponse> sendGet(@Url String url);
+        @GET("{url}")
+        Call<BaseResponse> sendGet(@Path("url") String url);
+        /**
+         * 通用delete请求，自己拼接带参数的请求地址
+         *
+         * @param url
+         * @return
+         */
+        @DELETE("{url}")
+        Call<BaseResponse> sendDelete(@Path("url") String url);
 
         /**
          * 通用上传请求

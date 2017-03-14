@@ -14,10 +14,14 @@ import com.neo.duan.event.base.EventCode;
 import com.neo.duan.utils.ListUtils;
 import com.neo.duan.utils.StringUtils;
 import com.neo.duan.utils.constants.Constants;
+import com.ryx.ryx.ui.activity.MainActivity;
+import com.ryx.ryx.ui.activity.PermissionsActivity;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+
+import static com.ryx.ryx.RyxApplication.PERMISSIONS;
 
 
 /**
@@ -65,6 +69,23 @@ public class IntentManager {
         startActivity(context, intent);
     }
 
+    /**
+     * 跳转到首页Activity
+     *
+     * @param context
+     */
+    public void goMainActivity(Context context) {
+        startActivity(context, MainActivity.class);
+    }
+    /**
+     * 跳转到权限授权页面
+     *
+     * @param context
+     * @param requestCode
+     */
+    public void goPermissionsActivity(Activity context, int requestCode) {
+        PermissionsActivity.startActivityForResult(context, requestCode, PERMISSIONS);
+    }
 
     /**
      * 开启摄像头

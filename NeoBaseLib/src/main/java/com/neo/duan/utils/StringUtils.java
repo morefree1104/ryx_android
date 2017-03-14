@@ -2,8 +2,11 @@ package com.neo.duan.utils;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import okhttp3.RequestBody;
 
 /**
  * String Utils
@@ -290,4 +293,23 @@ public class StringUtils {
         }
         return new String(source);
     }
+
+    /**
+     * transform map to string
+     *
+     * @param params
+     * @return
+     */
+    public static String parseMap2String(Map<String, Object> params) {
+        String param_str = "";
+        if(params.size() > 0){
+            param_str += "?";
+            for (String key : params.keySet()) {
+                param_str += key + "=" + params.get(key) + "&";
+            }
+        }
+        return param_str;
+    }
+
+
 }

@@ -44,7 +44,7 @@ public class HttpLoader extends BaseHttpLoader {
     }
 
     /**
-     * 发送请求
+     * 发送请求  默认post请求
      *
      * @param handler
      */
@@ -76,19 +76,63 @@ public class HttpLoader extends BaseHttpLoader {
 
         //处理回调
         newCall.enqueue(handler);
+    }
 
-        //将请求添加到集合中，方便取消请求,缓存中只缓存5个请求,也就说最多允许同时发5个请求
-//        if (mCallCache.size() > MAX_CALL_COUNT) {
-//            LogUtils.e(TAG, "call count size more " + MAX_CALL_COUNT + ", will cancel the index of 0 call");
-//            //取消最后一个请求
-//            Call lastCall = mCallCache.getLast();
-//            if (lastCall != null && !lastCall.isCanceled()) {
-//                lastCall.cancel();
-//                mCallCache.removeLast();
-//            }
-//        } else {
-//            mCallCache.add(request, newCall);
-//        }
+
+    /**
+     * 发送get请求
+     *
+     * @param handler
+     */
+    public void sendGetRequest(BaseHttpHandler handler) {
+        checkHandler(handler);
+        //通过校验，调用请求开始
+        handler.onStart();
+
+        //校验网络是否正常
+        if (!NetWorkUtils.isAvailable(AppBaseApplication.getInstance())) {
+            handler.onNetWorkErrorResponse();
+            //TODO 根据产品需求要不要获取缓存数据
+            return;
+        }
+
+        BaseRequest request = handler.getRequest();
+
+        Map<String, Object> params = request.getParams();
+
+        Call<BaseResponse> newCall = mApiService.sendGet(request.getApi() + StringUtils.parseMap2String(params));
+
+        //处理回调
+        newCall.enqueue(handler);
+    }
+
+
+    /**
+     * 发送delete请求
+     *
+     * @param handler
+     */
+    public void sendDeleteRequest(BaseHttpHandler handler) {
+        checkHandler(handler);
+        //通过校验，调用请求开始
+        handler.onStart();
+
+        //校验网络是否正常
+        if (!NetWorkUtils.isAvailable(AppBaseApplication.getInstance())) {
+            handler.onNetWorkErrorResponse();
+            //TODO 根据产品需求要不要获取缓存数据
+            return;
+        }
+
+        BaseRequest request = handler.getRequest();
+
+
+        Map<String, Object> params = request.getParams();
+
+        Call<BaseResponse> newCall = mApiService.sendDelete(request.getApi() + StringUtils.parseMap2String(params));
+
+        //处理回调
+        newCall.enqueue(handler);
     }
 
     /**
