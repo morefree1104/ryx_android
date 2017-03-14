@@ -8,6 +8,10 @@ import com.neo.duan.mvp.present.BasePresenter;
 import com.neo.duan.ui.widget.MainNavTabBarView;
 import com.ryx.ryx.R;
 import com.ryx.ryx.ui.activity.base.BaseActivity;
+import com.ryx.ryx.ui.fragment.ChoosingFragment;
+import com.ryx.ryx.ui.fragment.HomeFragment;
+import com.ryx.ryx.ui.fragment.MyFragment;
+import com.ryx.ryx.ui.fragment.ScheduleFragment;
 
 import java.util.ArrayList;
 import java.util.List;

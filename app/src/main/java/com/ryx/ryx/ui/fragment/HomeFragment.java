@@ -4,7 +4,7 @@ package com.ryx.ryx.ui.fragment;
 
 import com.neo.duan.mvp.present.BasePresenter;
 import com.ryx.ryx.R;
-import com.ryx.ryx.ui.fragment.base.fragment.BaseFragment;
+import com.ryx.ryx.ui.fragment.base.BaseFragment;
 
 public class HomeFragment extends BaseFragment{
     @Override
