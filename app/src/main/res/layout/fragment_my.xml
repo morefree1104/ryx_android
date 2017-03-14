@@ -2,8 +2,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:background="@color/bg_color"
     tools:context="com.ryx.ryx.ui.fragment.base.BaseFragment">
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -12,7 +16,175 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="@mipmap/my_bg"
+                android:layout_height="52dp">
+                <com.neo.duan.ui.widget.app.XImageView
+                    android:id="@+id/iv_portrait"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_margin="12dp"
+                    android:visibility="visible"
+                    fresco:actualImageScaleType="focusCrop"
+                    fresco:fadeDuration="300"
+                    fresco:failureImage="@mipmap/ic_default_head"
+                    fresco:failureImageScaleType="centerInside"
+                    fresco:placeholderImage="@mipmap/ic_default_head"
+                    fresco:placeholderImageScaleType="fitCenter"
+                    fresco:retryImageScaleType="centerCrop"
+                    fresco:roundAsCircle="true" />
+
+                <TextView
+                    android:id="@+id/tv_not_logged"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="您还未登录"
+                    android:textColor="@color/white"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/iv_portrait"
+                    android:layout_toEndOf="@+id/iv_portrait"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginStart="12dp" />
+                <TextView
+                    android:id="@+id/tv_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:background="@drawable/et_style"
+                    android:text="  立即登录  "
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/tv_not_logged"
+                    android:layout_toEndOf="@+id/tv_not_logged"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginStart="12dp"
+                     />
+                <TextView
+                    android:id="@+id/tv_register"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="注册"
+                    android:textColor="@color/white"
+                    android:layout_toRightOf="@id/tv_login"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="40dp"
+                  />
+
+            </RelativeLayout>
+         <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="horizontal">
+         <com.neo.duan.ui.widget.recyclerview.XRecyclerView
+          android:id="@+id/rlv_share"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:overScrollMode="never"
+          android:background="@color/common_white"/>
+
          </LinearLayout>
+            <include layout="@layout/layout_gray_line" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <include layout="@layout/layout_gray_line" />
+
+
+            <com.neo.duan.ui.widget.ClickItemView
+                android:id="@+id/clv_daijingjuan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                app:leftIcon="@mipmap/daijingjuan_01"
+                app:leftText="@string/daijinjuan"
+                app:leftTextColor="#333"
+                app:rightTextColor="#666"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/common_gray_line"/>
+            <com.neo.duan.ui.widget.ClickItemView
+            android:id="@+id/clv_dingdan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            app:leftIcon="@mipmap/dingdan_01"
+            app:leftText="@string/dingdan"
+            app:leftTextColor="#333"
+            app:rightTextColor="#666"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="@color/common_gray_line"/>
+            <com.neo.duan.ui.widget.ClickItemView
+                android:id="@+id/clv_vip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                app:leftIcon="@mipmap/vipka_01"
+                app:leftText="@string/vip"
+                app:leftTextColor="#333"
+                app:rightTextColor="#666"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/common_gray_line"/>
+            <com.neo.duan.ui.widget.ClickItemView
+                android:id="@+id/clv_tuiguang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                app:leftIcon="@mipmap/tuiguang_01"
+                app:leftText="@string/tuiguang"
+                app:leftTextColor="#333"
+                app:rightTextColor="#666"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="@color/common_gray_line"/>
+            <com.neo.duan.ui.widget.ClickItemView
+                android:id="@+id/clv_xiaoxi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                app:leftIcon="@mipmap/xiaoxi_01"
+                app:leftText="@string/xiaoxi"
+                app:leftTextColor="#333"
+                app:rightTextColor="#666"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="@color/common_gray_line"/>
+            <com.neo.duan.ui.widget.ClickItemView
+                android:id="@+id/clv_bangzhu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                app:leftIcon="@mipmap/bangzhu_01"
+                app:leftText="@string/bangzhu"
+                app:leftTextColor="#333"
+                app:rightTextColor="#666"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="@color/common_gray_line"/>
+            <com.neo.duan.ui.widget.ClickItemView
+                android:id="@+id/clv_women"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                app:leftIcon="@mipmap/women_01"
+                app:leftText="@string/women"
+                app:leftTextColor="#333"
+                app:rightTextColor="#666"/>
+
+
+        </LinearLayout>
     </ScrollView>
 
 
