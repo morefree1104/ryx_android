@@ -17,7 +17,8 @@ public class ChoosingFragment extends BaseFragment{
     }
 
     @Override
-    public void initLayouts() {setContentView(R.layout.fragment_choosing);
+    public void initLayouts() {
+        setContentView(R.layout.fragment_choosing);
 
     }
 

@@ -145,6 +145,16 @@ public abstract class AppBaseActivity<P extends BasePresenter>  extends AppCompa
         mLlTop.setVisibility(enabled ? View.VISIBLE : View.GONE);
     }
 
+    /**
+     * 是否显示顶部导航，附加顶部栏颜色
+     *
+     * @param enabled
+     * @param resId
+     */
+    public void enableTop(boolean enabled, int resId) {
+        mLlTop.setVisibility(enabled ? View.VISIBLE : View.GONE);
+        mLlTop.setBackgroundColor(getResources().getColor(resId));
+    }
 
     /**
      * 是否显示左导航键
