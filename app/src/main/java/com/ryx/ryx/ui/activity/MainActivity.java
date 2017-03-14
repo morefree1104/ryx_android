@@ -30,6 +30,7 @@ public class MainActivity extends BaseActivity implements MainNavTabBarView.OnTa
 
     @Override
     public void initTop() {
+        enableTop(false);
 
     }
 

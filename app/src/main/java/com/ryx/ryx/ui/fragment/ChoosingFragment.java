@@ -7,11 +7,15 @@ import com.ryx.ryx.ui.fragment.base.fragment.BaseFragment;
 public class ChoosingFragment extends BaseFragment{
     @Override
     public void initTop() {
+        enableTop(true);
+        enableBack(false);
+        enableTitle(true,"选课");
+
 
     }
 
     @Override
-    public void initLayouts() {
+    public void initLayouts() {setContentView(R.layout.fragment_choosing);
 
     }
 

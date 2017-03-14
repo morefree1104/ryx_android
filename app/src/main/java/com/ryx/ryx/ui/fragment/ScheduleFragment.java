@@ -8,11 +8,15 @@ public class ScheduleFragment extends BaseFragment {
 
     @Override
     public void initTop() {
+        enableTop(true);
+        enableBack(false);
+        enableTitle(true,"课表");
+     enableRightNav(true, R.mipmap.youxiang_01);
 
     }
 
     @Override
-    public void initLayouts() {
+    public void initLayouts() {setContentView(R.layout.fragment_schedule);
 
     }
 

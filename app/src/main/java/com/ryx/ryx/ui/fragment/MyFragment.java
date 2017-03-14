@@ -8,11 +8,14 @@ public class MyFragment extends BaseFragment{
 
     @Override
     public void initTop() {
-
+        enableTop(true);
+        enableBack(false);
+        enableTitle(true,"我的");
+        enableRightNav(true,"设置");
     }
 
     @Override
-    public void initLayouts() {
+    public void initLayouts() {setContentView(R.layout.fragment_my);
 
     }
 
