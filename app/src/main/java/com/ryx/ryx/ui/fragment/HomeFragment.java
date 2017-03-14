@@ -1,4 +1,4 @@
-package com.ryx.ryx.ui.fragment.base;
+package com.ryx.ryx.ui.fragment;
 
 
 

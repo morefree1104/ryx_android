@@ -1,4 +1,4 @@
-package com.ryx.ryx.ui.fragment.base.fragment;
+package com.ryx.ryx.ui.fragment.base;
 
 import android.support.v4.app.Fragment;
 import android.view.View;

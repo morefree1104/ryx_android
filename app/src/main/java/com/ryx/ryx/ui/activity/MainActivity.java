@@ -3,17 +3,11 @@ package com.ryx.ryx.ui.activity;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 
 import com.neo.duan.mvp.present.BasePresenter;
 import com.neo.duan.ui.widget.MainNavTabBarView;
 import com.ryx.ryx.R;
 import com.ryx.ryx.ui.activity.base.BaseActivity;
-import com.ryx.ryx.ui.fragment.base.ChoosingFragment;
-import com.ryx.ryx.ui.fragment.base.HomeFragment;
-import com.ryx.ryx.ui.fragment.base.MyFragment;
-import com.ryx.ryx.ui.fragment.base.ScheduleFragment;
 
 import java.util.ArrayList;
 import java.util.List;
