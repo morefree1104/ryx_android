@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--首页底部导航默认名称-->
+    <string-array name="main_tab_default_name">
+        <item>首页</item>
+        <item>选课</item>
+        <item>课表</item>
+        <item>我的</item>
+    </string-array>
+    <!--首页底部导航默认选中图片-->
+    <integer-array name="main_tab_default_selected">
+        <item>@drawable/ic_select_home</item>
+        <item>@drawable/ic_select_choosing</item>
+        <item>@drawable/ic_select_schedule</item>
+        <item>@drawable/ic_select_my</item>
+    </integer-array>
+
+    <!--首页底部导航默认未选中图片-->
+    <integer-array name="main_tab_default_unselected">
+        <item>@drawable/ic_unselect_home</item>
+        <item>@drawable/ic_unselect_choosing</item>
+        <item>@drawable/ic_unselect_schedule</item>
+        <item>@drawable/ic_unselect_my</item>
+
+    </integer-array>
+
+
+</resources>
