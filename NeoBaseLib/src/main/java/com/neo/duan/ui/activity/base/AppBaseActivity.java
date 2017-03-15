@@ -197,6 +197,10 @@ public abstract class AppBaseActivity<P extends BasePresenter>  extends AppCompa
         mLlTop.enableRightNav(enabled, rightNav);
     }
 
+    public void enableRightNav(boolean enabled, String rightNav, int colorId) {
+        mLlTop.enableRightNav(enabled, rightNav, colorId);
+    }
+
     /**
      * 设置标题
      *

@@ -189,6 +189,9 @@ public abstract class AppBaseFragment<P extends BasePresenter> extends Fragment 
         mLlTop.enableRightNav(enabled, rightNav);
     }
 
+    public void enableRightNav(boolean enabled, String rightNav, int colorId) {
+        mLlTop.enableRightNav(enabled, rightNav, colorId);
+    }
     /**
      * 设置标题
      *

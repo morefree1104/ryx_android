@@ -300,6 +300,17 @@ public class CommonTitleBarView extends LinearLayout {
         enableRightNav(enabled);
     }
 
+    public void enableRightNav(boolean enabled, String rightNav, int colorId) {
+        if (enabled) {
+            mFlRightContainer.removeAllViews();
+            TextView tvRight = (TextView) View.inflate(mContext, R.layout.layout_top_bar_nav_tv, null);
+            tvRight.setTextColor(getResources().getColor(colorId));
+            tvRight.setText(rightNav);
+            mFlRightContainer.addView(tvRight);
+        }
+        enableRightNav(enabled);
+    }
+
     /**
      * TopBar底部导航线
      * @param enabled
