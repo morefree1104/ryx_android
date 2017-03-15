@@ -14,6 +14,7 @@ import com.neo.duan.event.base.EventCode;
 import com.neo.duan.utils.ListUtils;
 import com.neo.duan.utils.StringUtils;
 import com.neo.duan.utils.constants.Constants;
+import com.ryx.ryx.ui.activity.LoginActivity;
 import com.ryx.ryx.ui.activity.MainActivity;
 import com.ryx.ryx.ui.activity.PermissionsActivity;
 
@@ -76,6 +77,13 @@ public class IntentManager {
      */
     public void goMainActivity(Context context) {
         startActivity(context, MainActivity.class);
+    }
+
+    /*
+    * 跳转登录
+    */
+    public void goLoginActivity(Context context) {
+        startActivity(context, LoginActivity.class);
     }
     /**
      * 跳转到权限授权页面
