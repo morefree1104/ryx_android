@@ -218,6 +218,22 @@ public class CommonTitleBarView extends LinearLayout {
         enableTitle(enabled);
     }
 
+
+    public void enableTitle(boolean enabled, String title, int resId) {
+        if (enabled) {
+            title = ((title == null || "null".equals(title)) ? "" : title);
+            if (title.length() > 6) {
+                title = title.substring(0, 6) + "...";
+            }
+            TextView tvTitle = (TextView) View.inflate(mContext, R.layout.layout_top_bar_nav_title_tv, null);
+            tvTitle.setText(title);
+            tvTitle.setTextColor(getResources().getColor(resId));
+            mFlTitleContainer.removeAllViews();
+            mFlTitleContainer.addView(tvTitle);
+        }
+        enableTitle(enabled);
+    }
+
     public void enableTitle(boolean enabled, int resId) {
         if (resId <= 0) {
             throw new IllegalArgumentException("enableTitle resId <= 0");

@@ -3,9 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:textColor="@android:color/white"
+    android:textColor="@color/orange"
     android:textSize="13sp"
     android:drawablePadding="3dp"
     android:text="返回"
-    tools:background="@color/orange"/>
+    tools:background="@color/common_white"/>
 

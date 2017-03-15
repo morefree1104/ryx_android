@@ -200,6 +200,15 @@ public abstract class AppBaseFragment<P extends BasePresenter> extends Fragment 
     }
 
     /**
+     * 设置标题及文字颜色
+     *
+     * @param enabled
+     * @param title
+     */
+    public void enableTitle(boolean enabled, String title, int resId) {
+        mLlTop.enableTitle(enabled, title, resId);
+    }
+    /**
      * 设置标题
      *
      * @param enabled

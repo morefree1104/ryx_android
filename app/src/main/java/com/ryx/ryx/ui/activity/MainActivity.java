@@ -35,6 +35,8 @@ public class MainActivity extends BaseActivity implements MainNavTabBarView.OnTa
     @Override
     public void initTop() {
 //        enableTop(true, com.neo.duan.R.color.orange);
+//        enableBack(true, "返回");
+//        enableTitle(true, "首页");
         enableTop(false);
     }
 

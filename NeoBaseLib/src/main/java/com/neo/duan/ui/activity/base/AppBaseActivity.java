@@ -207,6 +207,17 @@ public abstract class AppBaseActivity<P extends BasePresenter>  extends AppCompa
         mLlTop.enableTitle(enabled, title);
     }
 
+
+    /**
+     * 设置标题及文字颜色
+     *
+     * @param enabled
+     * @param title
+     */
+    public void enableTitle(boolean enabled, String title, int resId) {
+        mLlTop.enableTitle(enabled, title, resId);
+    }
+
     /**
      * 设置标题
      *
