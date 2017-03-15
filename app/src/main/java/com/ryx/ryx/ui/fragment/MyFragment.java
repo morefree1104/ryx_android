@@ -3,6 +3,7 @@ package com.ryx.ryx.ui.fragment;
 import android.support.v7.widget.GridLayoutManager;
 
 import com.neo.duan.mvp.present.BasePresenter;
+import com.neo.duan.ui.widget.recyclerview.DividerGridItemDecoration;
 import com.neo.duan.ui.widget.recyclerview.XRecyclerView;
 import com.ryx.ryx.R;
 import com.ryx.ryx.ui.adapter.Myadapter;
@@ -32,6 +33,7 @@ public class MyFragment extends BaseFragment{
     @Override
     public void initViews() {
         mRecyclerView.setLayoutManager(new GridLayoutManager(mContext, 4));
+        mRecyclerView.addItemDecoration(new DividerGridItemDecoration(mContext, R.drawable.line_divider));
 
 
     }

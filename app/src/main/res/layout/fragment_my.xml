@@ -19,11 +19,11 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:background="@mipmap/my_bg"
-                android:layout_height="52dp">
+                android:layout_height="108dp">
                 <com.neo.duan.ui.widget.app.XImageView
                     android:id="@+id/iv_portrait"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
                     android:layout_alignParentLeft="true"
                     android:layout_margin="12dp"
                     android:visibility="visible"
@@ -55,12 +55,11 @@
                     android:textSize="16sp"
                     android:background="@drawable/et_style"
                     android:text="  立即登录  "
-                    android:layout_marginTop="15dp"
                     android:layout_toRightOf="@+id/tv_not_logged"
                     android:layout_toEndOf="@+id/tv_not_logged"
                     android:layout_marginLeft="12dp"
                     android:layout_marginStart="12dp"
-                     />
+                    android:layout_alignBottom="@+id/tv_not_logged" />
                 <TextView
                     android:id="@+id/tv_register"
                     android:layout_width="wrap_content"
@@ -118,7 +117,7 @@
             app:rightTextColor="#666"/>
             <View
                 android:layout_width="match_parent"
-                android:layout_height="2px"
+                android:layout_height="1px"
                 android:background="@color/common_gray_line"/>
             <com.neo.duan.ui.widget.ClickItemView
                 android:id="@+id/clv_vip"
@@ -157,7 +156,7 @@
                 app:rightTextColor="#666"/>
             <View
                 android:layout_width="match_parent"
-                android:layout_height="2px"
+                android:layout_height="1px"
                 android:background="@color/common_gray_line"/>
             <com.neo.duan.ui.widget.ClickItemView
                 android:id="@+id/clv_bangzhu"
@@ -171,7 +170,8 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="2px"
+                android:layout_height="1px"
+                android:layout_marginLeft="@dimen/dp_20"
                 android:background="@color/common_gray_line"/>
             <com.neo.duan.ui.widget.ClickItemView
                 android:id="@+id/clv_women"
