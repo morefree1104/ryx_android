@@ -173,6 +173,15 @@ public abstract class AppBaseActivity<P extends BasePresenter>  extends AppCompa
         mLlTop.enableBack(enabled, resId, text);
     }
 
+    /**
+     * 修改返回的文字颜色
+     *
+     * @param enabled
+     */
+    public void enableBack(boolean enabled, int resId, String text, int colorId) {
+        mLlTop.enableBack(enabled, resId, text, colorId);
+    }
+
     public void enableBack(boolean enabled, int resId) {
         mLlTop.enableBack(enabled, resId);
     }

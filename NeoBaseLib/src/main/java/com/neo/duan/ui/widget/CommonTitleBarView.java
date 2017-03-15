@@ -157,7 +157,22 @@ public class CommonTitleBarView extends LinearLayout {
         }
 
     }
+    /**
+     *
+     * @param enabled
+     * @param resId
+     * @param text
+     * @param colorId
+     */
+    public void enableBack(boolean enabled, int resId, String text, int colorId) {
+        String typeName = getResources().getResourceTypeName(resId);
+        if ("mipmap".equals(typeName) || "drawable".equals(typeName)) {
+            enableBack(enabled, ContextCompat.getDrawable(mContext, resId), text, colorId);
+        } else if ("string".equals(typeName)) {
+            enableBack(enabled, getResources().getString(resId));
+        }
 
+    }
     public void enableBack(boolean enabled, View view) {
         enableBack(enabled);
         if (enabled) {
@@ -199,6 +214,29 @@ public class CommonTitleBarView extends LinearLayout {
         enableBack(enabled);
     }
 
+    /**
+     * 返回键显示图片,并设置文字颜色
+     *
+     * @param enabled
+     * @param drawable
+     * @param text 文本
+     */
+    public void enableBack(boolean enabled, Drawable drawable, String text, int colorId) {
+        if (enabled) {
+            mFlLeftContainer.removeAllViews();
+            TextView tvBack = (TextView) View.inflate(mContext, R.layout.layout_top_bar_nav_tv, null);
+            if (drawable != null) {
+                // 这一步必须要做,否则不会显示.
+                drawable.setBounds(0, 0, drawable.getMinimumWidth(), drawable.getMinimumHeight());
+                tvBack.setCompoundDrawables(drawable,null,null,null);
+            }
+
+            tvBack.setText(text);
+            tvBack.setTextColor(getResources().getColor(colorId));
+            mFlLeftContainer.addView(tvBack);
+        }
+        enableBack(enabled);
+    }
 
     public void enableTitle(boolean enabled) {
         mFlTitleContainer.setVisibility(enabled ? View.VISIBLE : View.GONE);

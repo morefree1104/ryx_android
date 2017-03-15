@@ -160,6 +160,14 @@ public abstract class AppBaseFragment<P extends BasePresenter> extends Fragment 
     public void enableBack(boolean enabled, int resId, String text) {
         mLlTop.enableBack(enabled, resId, text);
     }
+    /**
+     * 修改返回的文字颜色
+     *
+     * @param enabled
+     */
+    public void enableBack(boolean enabled, int resId, String text, int colorId) {
+        mLlTop.enableBack(enabled, resId, text, colorId);
+    }
 
     public void enableBack(boolean enabled, Drawable drawable) {
         mLlTop.enableBack(enabled, drawable);
