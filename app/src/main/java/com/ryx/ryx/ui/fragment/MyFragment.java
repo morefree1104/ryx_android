@@ -22,10 +22,10 @@ public class MyFragment extends BaseFragment{
 
     @Override
     public void initTop() {
-       // enableTop(true);
         enableTitle(true,"我的", com.neo.duan.R.color.common_black);
-        enableRightNav(true,"设置");
-       // enableBack(true,"返回");
+        enableRightNav(true,"设置", com.neo.duan.R.color.common_black);
+        enableBack(false);
+
     }
 
     @Override
@@ -63,5 +63,13 @@ public class MyFragment extends BaseFragment{
     @OnClick(R.id.tv_login)
     public void onClickLogin(View view) {
         IntentManager.getInstance().goLoginActivity(mContext);
+    }
+    /**
+     * 点击注册
+     * @param view
+     */
+    @OnClick(R.id.tv_register)
+    public void onClickregister(View view) {
+        IntentManager.getInstance().goRegisterActivity(mContext);
     }
 }

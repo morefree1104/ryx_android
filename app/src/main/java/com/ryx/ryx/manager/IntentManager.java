@@ -17,6 +17,7 @@ import com.neo.duan.utils.constants.Constants;
 import com.ryx.ryx.ui.activity.LoginActivity;
 import com.ryx.ryx.ui.activity.MainActivity;
 import com.ryx.ryx.ui.activity.PermissionsActivity;
+import com.ryx.ryx.ui.activity.RegisterActivity;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -84,6 +85,12 @@ public class IntentManager {
     */
     public void goLoginActivity(Context context) {
         startActivity(context, LoginActivity.class);
+    }
+    /*
+    * 跳转注册
+    */
+    public void goRegisterActivity(Context context) {
+        startActivity(context, RegisterActivity.class);
     }
     /**
      * 跳转到权限授权页面
