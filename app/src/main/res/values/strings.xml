@@ -1,6 +1,14 @@
 <resources>
     <string name="app_name">融易学</string>
 
+    <string name="daijinjuan">我的代金劵</string>
+    <string name="dingdan">我的订单</string>
+    <string name="vip">我的VIP卡</string>
+    <string name="tuiguang">推广中心</string>
+    <string name="xiaoxi">我的消息</string>
+    <string name="bangzhu">帮助反馈</string>
+    <string name="women">关于我们</string>
+
     <string name="help">帮助</string>
     <string name="permission">权限(permission)</string>
     <string name="no_permissions">应用需要必要的运行权限</string>
