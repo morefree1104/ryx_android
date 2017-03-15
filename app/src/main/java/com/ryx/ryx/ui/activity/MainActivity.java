@@ -63,7 +63,6 @@ public class MainActivity extends BaseActivity implements MainNavTabBarView.OnTa
     @Override
     public void initData() {
         mTabBar.setItemSelected(0);
-        showLoading("测试");
     }
 
     /**
