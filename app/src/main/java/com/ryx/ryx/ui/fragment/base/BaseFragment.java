@@ -5,6 +5,7 @@ import android.view.View;
 
 import com.neo.duan.mvp.present.BasePresenter;
 import com.neo.duan.ui.fragment.base.AppBaseFragment;
+import com.ryx.ryx.ui.dialog.LoadingDialog;
 
 import butterknife.ButterKnife;
 
@@ -17,6 +18,7 @@ public abstract class BaseFragment<P extends BasePresenter> extends AppBaseFragm
 
     protected boolean mHidden;
 
+    private LoadingDialog mLoadingDialog;
     @Override
     public void setContentView(View contentView) {
         super.setContentView(contentView);
@@ -35,5 +37,25 @@ public abstract class BaseFragment<P extends BasePresenter> extends AppBaseFragm
         android.support.v4.app.FragmentTransaction transaction = fragmentManager.beginTransaction();
         transaction.add(containerId, fragment);
         transaction.commit();
+    }
+
+    @Override
+    public void showLoading() {
+        showLoading("");
+    }
+
+    @Override
+    public void showLoading(String msg) {
+        if (mLoadingDialog == null) {
+            mLoadingDialog = new LoadingDialog(mContext, msg);
+        }
+        mLoadingDialog.show();
+    }
+
+    @Override
+    public void hideLoading() {
+        if (mLoadingDialog != null && mLoadingDialog.isShowing()) {
+            mLoadingDialog.dismiss();
+        }
     }
 }

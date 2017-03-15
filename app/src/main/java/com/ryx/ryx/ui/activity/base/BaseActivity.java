@@ -7,6 +7,7 @@ import android.view.View;
 import com.neo.duan.mvp.present.BasePresenter;
 import com.neo.duan.ui.activity.base.AppBaseActivity;
 import com.neo.duan.utils.LogUtils;
+import com.ryx.ryx.ui.dialog.LoadingDialog;
 
 import butterknife.ButterKnife;
 
@@ -17,7 +18,7 @@ import butterknife.ButterKnife;
  */
 public abstract class BaseActivity<P extends BasePresenter> extends AppBaseActivity<P> {
 
-    private ProgressDialog mLoadingDialog;
+    private LoadingDialog mLoadingDialog;
 
     @Override
     public void setContentView(View contentView) {
@@ -34,10 +35,8 @@ public abstract class BaseActivity<P extends BasePresenter> extends AppBaseActiv
     @Override
     public void showLoading(String msg) {
         if (mLoadingDialog == null) {
-            mLoadingDialog = new ProgressDialog(mContext);
-            mLoadingDialog.setCanceledOnTouchOutside(false);
+            mLoadingDialog = new LoadingDialog(mContext, msg);
         }
-        mLoadingDialog.setMessage(msg);
         mLoadingDialog.show();
     }
 

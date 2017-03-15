@@ -17,4 +17,6 @@
     <color name="guide1">#00DDC6</color>
     <color name="guide2">#985BD2</color>
     <color name="guide3">#F6B32E</color>
+
+    <color name="alpha0">#00ffffff</color>
 </resources>
