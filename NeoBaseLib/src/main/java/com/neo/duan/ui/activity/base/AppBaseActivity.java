@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -182,6 +183,14 @@ public abstract class AppBaseActivity<P extends BasePresenter>  extends AppCompa
         mLlTop.enableBack(enabled, resId, text, colorId);
     }
 
+    /**
+     * 修改返回的文字颜色
+     *
+     * @param enabled
+     */
+    public void enableBack(boolean enabled, String text, int colorId) {
+        mLlTop.enableBack(enabled, ContextCompat.getDrawable(mContext, R.drawable.ic_top_bar_back_black), text, colorId);
+    }
     public void enableBack(boolean enabled, int resId) {
         mLlTop.enableBack(enabled, resId);
     }

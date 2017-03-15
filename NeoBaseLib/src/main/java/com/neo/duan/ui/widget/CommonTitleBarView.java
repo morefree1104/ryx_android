@@ -171,7 +171,6 @@ public class CommonTitleBarView extends LinearLayout {
         } else if ("string".equals(typeName)) {
             enableBack(enabled, getResources().getString(resId));
         }
-
     }
     public void enableBack(boolean enabled, View view) {
         enableBack(enabled);

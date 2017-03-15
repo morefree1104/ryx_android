@@ -6,6 +6,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -169,6 +170,14 @@ public abstract class AppBaseFragment<P extends BasePresenter> extends Fragment 
         mLlTop.enableBack(enabled, resId, text, colorId);
     }
 
+    /**
+     * 修改返回的文字颜色
+     *
+     * @param enabled
+     */
+    public void enableBack(boolean enabled, String text, int colorId) {
+        mLlTop.enableBack(enabled, ContextCompat.getDrawable(mContext, R.drawable.ic_top_bar_back_black), text, colorId);
+    }
     public void enableBack(boolean enabled, Drawable drawable) {
         mLlTop.enableBack(enabled, drawable);
     }
