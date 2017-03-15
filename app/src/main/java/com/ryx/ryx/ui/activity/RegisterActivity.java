@@ -2,27 +2,31 @@ package com.ryx.ryx.ui.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
 
 import com.neo.duan.mvp.present.BasePresenter;
+import com.neo.duan.ui.widget.CommonTitleBarView;
 import com.ryx.ryx.R;
 import com.ryx.ryx.manager.IntentManager;
 import com.ryx.ryx.ui.activity.base.BaseActivity;
 
-import butterknife.OnClick;
-
-public class LoginActivity extends BaseActivity {
+public class RegisterActivity extends BaseActivity{
 
 
     @Override
     public void initTop() {
         enableTitle(true,"融易学", com.neo.duan.R.color.common_black);
         enableBack(true,"返回");
-
+        enableRightNav(true,"登录",com.neo.duan.R.color.common_black);
+        setOnNavRightListener(new CommonTitleBarView.OnNavRightListener() {
+            @Override
+            public void onNavRight() {
+                IntentManager.getInstance().goLoginActivity(mContext);
+            }
+        });
     }
 
     @Override
-    public void initLayouts() {setContentView(R.layout.activity_login);
+    public void initLayouts() {setContentView(R.layout.activity_register);
 
     }
 
@@ -44,13 +48,5 @@ public class LoginActivity extends BaseActivity {
     @Override
     public void initData() {
 
-    }
-    /**
-     * 点击注册
-     * @param view
-     */
-    @OnClick(R.id.lg_tv_register)
-    public void onClickregister(View view) {
-        IntentManager.getInstance().goRegisterActivity(mContext);
     }
 }

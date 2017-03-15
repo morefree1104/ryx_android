@@ -26,7 +26,7 @@ public class Myadapter extends XBaseAdapter<Integer> {
     };
 
     private static final int[] resArr = {
-            R.mipmap.kechenng_01,
+            R.mipmap.kecheng_01,
             R.mipmap.guanzhu_01,
             R.mipmap.shoucang_01,
             R.mipmap.lixian_01

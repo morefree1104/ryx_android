@@ -113,7 +113,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:minHeight="48dp"
-                app:leftIcon="@mipmap/daijingjuan_01"
+                app:leftIcon="@mipmap/daijinjuan_01"
                 app:leftText="@string/daijinjuan"
                 app:leftTextColor="#333"
                 app:rightTextColor="#666"/>
