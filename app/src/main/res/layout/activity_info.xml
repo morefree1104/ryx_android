@@ -104,6 +104,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="1px"
                 android:background="@color/common_gray_line" />
+
             <LinearLayout
                 android:id="@+id/ll_info"
                 android:layout_width="match_parent"
@@ -144,32 +145,102 @@
                     />
             </LinearLayout>
 
-            <com.neo.duan.ui.widget.ClickItemView
-                android:id="@+id/clv_change_hangye"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:minHeight="48dp"
-                app:leftText="@string/shoujihao"
-                app:leftTextColor="#333"
-                app:rightTextColor="#666"
-                tools:rightText="@string/shoujihao" />
-
+                android:background="@color/white"
+                android:orientation="vertical"
+                >
+            <com.ryx.ryx.ui.view.InfoEditTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintText="138****8839"
+            app:editType="number"
+            app:titleText="手机电话"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/common_gray_line"/>
             <com.ryx.ryx.ui.view.InfoEditTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:hintText="138****8839"
+                app:hintText="小凡凡"
                 app:editType="number"
-                app:titleText="手机电话"/>
-
-
+                app:titleText="用户名"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/common_gray_line"/>
             <com.ryx.ryx.ui.view.InfoTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:value="女"
                 app:titleText="性别"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/common_gray_line"/>
+            <com.ryx.ryx.ui.view.InfoEditTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintText="fan16633@163.com"
+                app:editType="number"
+                app:titleText="邮箱"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/common_gray_line"/>
+            <com.ryx.ryx.ui.view.InfoTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:value="在线教育"
+                app:titleText="行业"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/common_gray_line"/>
+            <com.ryx.ryx.ui.view.InfoTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:value="深圳"
+                app:titleText="所在地"/>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/common_gray_line"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="0"
+                android:background="@color/white"
+                android:paddingTop="@dimen/dp_20"
+                android:paddingBottom="@dimen/dp_40"
+                android:orientation="horizontal"
+                >
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="48dp"
+                android:layout_marginLeft="@dimen/dp_25"
+                android:layout_marginRight="@dimen/dp_25"
+                android:background="@drawable/selector_common_orange_btn"
+                android:text="提交"
+                android:textColor="@color/common_white"
+                android:textSize="@dimen/sp_16"/>
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="以后再说"
+                    android:textSize="@dimen/sp_14"
+                    />
+
+            </LinearLayout>
 
         </LinearLayout>
-            </ScrollView>
+    </ScrollView>
 
 
-        </LinearLayout>
+</LinearLayout>

@@ -5,6 +5,7 @@
     android:id="@+id/activity_retrieve"
     android:layout_width="match_parent"
     android:orientation="vertical"
+    android:background="@color/common_bg"
     android:layout_height="match_parent"
     tools:context="com.ryx.ryx.ui.activity.RetrieveActivity">
     <com.ryx.ryx.ui.view.FocusEditTextView
