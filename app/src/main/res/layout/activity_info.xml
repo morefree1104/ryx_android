@@ -156,21 +156,13 @@
             android:layout_height="wrap_content"
             app:hintText="138****8839"
             app:editType="number"
-            app:titleText="手机电话"/>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1px"
-                android:background="@color/common_gray_line"/>
-            <com.ryx.ryx.ui.view.InfoEditTextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:hintText="小凡凡"
-                app:editType="number"
-                app:titleText="用户名"/>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1px"
-                android:background="@color/common_gray_line"/>
+                app:titleText="手机号码"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/common_gray_line"/>
+
+
             <com.ryx.ryx.ui.view.InfoTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

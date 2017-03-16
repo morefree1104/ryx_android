@@ -2,6 +2,7 @@
 <resources>
     <color name="color_333">#333333</color>
     <color name="black_text">#4A4A4A</color>
+    <color name="gray_text">#9B9B9B</color>
     <color name="color_999">#999</color>
 
     <color name="search_box_color">#EBECF0</color>

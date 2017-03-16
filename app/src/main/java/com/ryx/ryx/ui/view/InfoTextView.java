@@ -37,7 +37,6 @@ public class InfoTextView extends RelativeLayout {
         hintStr = a.getString(R.styleable.FocusEditTextView_hintText);
         titleStr = a.getString(R.styleable.FocusEditTextView_titleText);
         editType = a.getInt(R.styleable.FocusEditTextView_editType, InputType.TYPE_TEXT_VARIATION_NORMAL);
-
         valueStr = a.getString(R.styleable.FocusEditTextView_value);
 
     }
@@ -46,8 +45,8 @@ public class InfoTextView extends RelativeLayout {
      * 初始化布局信息
      */
     private void initView() {
-        View.inflate(getContext(), R.layout.focus_edit_text_view, this);
-        editTxt = (EditText) findViewById(R.id.edit_text);
+        View.inflate(getContext(), R.layout.info_text_view, this);
+        editTxt = (TextView) findViewById(R.id.content);
         titleTv = (TextView) findViewById(R.id.head_txt);
         editTxt.setHint(hintStr);
         editTxt.setInputType(editType);

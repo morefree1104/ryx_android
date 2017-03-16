@@ -50,8 +50,8 @@ public class InfoEditTextView extends RelativeLayout {
      * 初始化布局信息
      */
     private void initView() {
-        View.inflate(getContext(), R.layout.focus_edit_text_view, this);
-        editTxt = (EditText) findViewById(R.id.edit_text);
+        View.inflate(getContext(), R.layout.info_edit_text_view, this);
+        editTxt = (EditText) findViewById(R.id.content);
         titleTv = (TextView) findViewById(R.id.head_txt);
         editTxt.setHint(hintStr);
         editTxt.setText(valueStr);
