@@ -2,9 +2,9 @@
 <resources>
 
     <!--状态栏相关颜色-->
-    <color name="colorPrimary">@color/common_white</color>
-    <color name="colorPrimaryDark">@color/common_white</color>
-    <color name="colorAccent">@color/common_white</color>
+    <color name="colorPrimary">@color/common_black</color>
+    <color name="colorPrimaryDark">@color/common_black</color>
+    <color name="colorAccent">@color/common_gray</color>
 
     <!--Toast相关颜色-->
     <color name="alert">@color/common_blue</color>

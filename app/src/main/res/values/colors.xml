@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="color_333">#333333</color>
-    <color name="black_text">#333333</color>
+    <color name="black_text">#4A4A4A</color>
     <color name="color_999">#999</color>
 
     <color name="search_box_color">#EBECF0</color>

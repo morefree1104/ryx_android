@@ -24,12 +24,13 @@ import com.ryx.ryx.R;
 public class FocusEditTextView extends RelativeLayout {
 
     private String hintStr;
+    private String valueStr;
     private Drawable textDrawable;
     private RelativeLayout mainRl;
     private int editType;
 
 
-    private TextView editTxt;
+    private EditText editTxt;
     public FocusEditTextView(Context context, AttributeSet attrs) {
         super(context, attrs);
         initCustomAttr(context, attrs);
@@ -43,7 +44,7 @@ public class FocusEditTextView extends RelativeLayout {
         hintStr = a.getString(R.styleable.FocusEditTextView_hintText);
         textDrawable = a.getDrawable(R.styleable.FocusEditTextView_textDrawable);
         editType = a.getInt(R.styleable.FocusEditTextView_editType, InputType.TYPE_TEXT_VARIATION_NORMAL);
-
+        valueStr = a.getString(R.styleable.FocusEditTextView_value);
 
     }
 
@@ -56,6 +57,7 @@ public class FocusEditTextView extends RelativeLayout {
         mainRl = (RelativeLayout) findViewById(R.id.main_rl);
         editTxt.setHint(hintStr);
         editTxt.setInputType(editType);
+        editTxt.setText(valueStr);
 //        String typeName = getResources().getResourceTypeName(textDrawable);
 //        if ("mipmap".equals(typeName) || "drawable".equals(typeName)) {
 //            Drawable drawable = ContextCompat.getDrawable(getContext(), textDrawable);

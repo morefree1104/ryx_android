@@ -159,8 +159,19 @@
                 app:rightTextColor="#666"
                 tools:rightText="@string/shoujihao" />
 
+            <com.ryx.ryx.ui.view.InfoEditTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintText="138****8839"
+                app:editType="number"
+                app:titleText="手机电话"/>
 
 
+            <com.ryx.ryx.ui.view.InfoTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:value="女"
+                app:titleText="性别"/>
 
         </LinearLayout>
             </ScrollView>

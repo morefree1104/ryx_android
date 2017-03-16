@@ -7,6 +7,8 @@
         android:layout_marginLeft="@dimen/dp_25"
         android:layout_marginRight="@dimen/dp_25"
         android:background="@drawable/login_style"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
         android:layout_height="@dimen/dp_50">
 
         <EditText
