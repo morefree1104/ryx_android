@@ -3,31 +3,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_register"
     android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_height="match_parent"
     android:background="@color/common_bg"
     tools:context="com.ryx.ryx.ui.activity.RegisterActivity">
-    <RelativeLayout
+    <com.ryx.ryx.ui.view.FocusEditTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_60"
-        android:layout_width="match_parent"
-        android:background="@drawable/login_style"
-        android:layout_marginLeft="@dimen/dp_25"
-        android:layout_marginRight="@dimen/dp_25"
-        android:layout_height="@dimen/dp_50">
-
-        <EditText
-            android:id="@+id/rg_et_account"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="请输入注册手机号码/邮箱"
-            android:textSize="@dimen/sp_12"
-            android:background="@null"
-            android:drawableLeft="@mipmap/account_01"
-            android:drawablePadding="@dimen/dp_10"
-            android:layout_marginLeft="@dimen/dp_10"
-            />
-
-    </RelativeLayout>
+        app:hintText="请输入注册手机号码/邮箱"
+        app:textDrawable="@mipmap/account_01"
+        />
     <RelativeLayout
         android:layout_marginTop="@dimen/dp_15"
         android:layout_width="match_parent"
@@ -61,48 +48,24 @@
            />
 
     </RelativeLayout>
-    <RelativeLayout
+
+    <com.ryx.ryx.ui.view.FocusEditTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:hintText="请输入8-16字母及数字组合的密码"
         android:layout_marginTop="@dimen/dp_15"
-        android:layout_width="match_parent"
-        android:background="@drawable/login_style"
-        android:layout_marginLeft="@dimen/dp_25"
-        android:layout_marginRight="@dimen/dp_25"
-        android:layout_height="@dimen/dp_50">
+        app:textDrawable="@mipmap/password_01"
+        app:editType="password"
+        />
 
-        <EditText
-            android:id="@+id/et_password"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="请输入8-16字母及数字组合的密码"
-            android:textSize="@dimen/sp_12"
-            android:background="@null"
-            android:drawableLeft="@mipmap/password_01"
-            android:drawablePadding="@dimen/dp_10"
-            android:layout_marginLeft="@dimen/dp_10"
-            />
-
-    </RelativeLayout>
-    <RelativeLayout
-        android:layout_marginTop="@dimen/dp_60"
-        android:layout_width="match_parent"
-        android:background="@drawable/login_style"
-        android:layout_marginLeft="@dimen/dp_25"
-        android:layout_marginRight="@dimen/dp_25"
-        android:layout_height="@dimen/dp_50">
-
-        <EditText
-            android:id="@+id/et_invitation"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="请输入邀请码（选填）"
-            android:textSize="@dimen/sp_12"
-            android:background="@null"
-            android:drawableLeft="@mipmap/yaoqingma_01"
-            android:drawablePadding="@dimen/dp_10"
-            android:layout_marginLeft="@dimen/dp_10"
-            />
-
-    </RelativeLayout>
+    <com.ryx.ryx.ui.view.FocusEditTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_80"
+        app:hintText="请输入邀请码（选填）"
+        app:editType="number"
+        app:textDrawable="@mipmap/yaoqingma_01"
+        />
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_marginTop="@dimen/dp_25"
