@@ -91,7 +91,7 @@ public class ClickItemView2 extends LinearLayout {
         setRightTextSize(mRightTextSize);
         setLeftTextColor(mLeftTextColorId);
         setRightTextColor(mRightTextColorId);
-        setLeftTextDrawable(mRightTextDrawable);
+        setRightTextDrawable(mRightTextDrawable);
     }
 
     /**
@@ -117,7 +117,7 @@ public class ClickItemView2 extends LinearLayout {
      *
      * @param mRightTextDrawable
      */
-    private void setLeftTextDrawable(Drawable mRightTextDrawable) {
+    private void setRightTextDrawable(Drawable mRightTextDrawable) {
 
         if (mRightTextDrawable != null) {
             // 这一步必须要做,否则不会显示.
