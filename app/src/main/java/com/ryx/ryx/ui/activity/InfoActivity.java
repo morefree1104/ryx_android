@@ -14,8 +14,6 @@ public class InfoActivity extends BaseActivity {
     public void initTop() {
         enableTitle(true,"完善个人信息", com.neo.duan.R.color.common_black);
         enableBack(true,"返回");
-        enableRightNav(true,"设置",com.neo.duan.R.color.common_black);
-
     }
 
     @Override
