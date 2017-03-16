@@ -75,7 +75,7 @@ public class ClickItemView2 extends LinearLayout {
     private void initView() {
         setGravity(Gravity.CENTER);
 
-        View.inflate(getContext(), R.layout.layout_click_item_view2, this);
+        View.inflate(getContext(), R.layout.layout_click_item_view_two, this);
         setBackgroundResource(R.color.common_white);
 
         mIvLeft = (ImageView) findViewById(R.id.iv_item_view_left);
@@ -138,7 +138,7 @@ public class ClickItemView2 extends LinearLayout {
             mIvLeft.setImageResource(resId);
             mIvLeft.setScaleType(ScaleType.FIT_CENTER);
         }
-        mIvLeft.setVisibility(enable ? View.VISIBLE : View.INVISIBLE);
+        mIvLeft.setVisibility(enable ? View.VISIBLE : View.GONE);
     }
 
     public void enableLeftIcon(boolean enable) {

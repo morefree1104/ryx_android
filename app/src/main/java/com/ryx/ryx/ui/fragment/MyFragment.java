@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.RelativeLayout;
 
 import com.neo.duan.mvp.present.BasePresenter;
+import com.neo.duan.ui.widget.CommonTitleBarView;
 import com.neo.duan.ui.widget.recyclerview.DividerGridItemDecoration;
 import com.neo.duan.ui.widget.recyclerview.XRecyclerView;
 import com.ryx.ryx.R;
@@ -26,6 +27,12 @@ public class MyFragment extends BaseFragment{
         enableTitle(true,"我的",com.neo.duan.R.color.common_black);
         enableBack(false);
         enableRightNav(true,"设置",com.neo.duan.R.color.common_black);
+        setOnNavRightListener(new CommonTitleBarView.OnNavRightListener() {
+            @Override
+            public void onNavRight() {
+                IntentManager.getInstance().goSetupActivity(mContext);
+            }
+        });
     }
 
     @Override

@@ -3,14 +3,22 @@
 
     <string name="daijinjuan">我的代金劵</string>
     <string name="dingdan">我的订单</string>
+    <string name="xinxi">我的信息</string>
+    <string name="renzheng">手机认证</string>
+    <string name="genggaihaoma">更改手机号码</string>
+    <string name="xiugaidenglu">修改登录密码</string>
+    <string name="xiugaizhifu">修改支付密码</string>
+    <string name="huancun">清除缓存</string>
     <string name="vip">我的VIP卡</string>
     <string name="tuiguang">推广中心</string>
     <string name="xiaoxi">我的消息</string>
     <string name="bangzhu">帮助反馈</string>
     <string name="shoujihao">手机号码</string>
     <string name="women">关于我们</string>
-
     <string name="xingbie">性别</string>
+
+
+
 
     <string name="help">帮助</string>
     <string name="permission">权限(permission)</string>

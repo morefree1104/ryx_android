@@ -20,6 +20,7 @@ import com.ryx.ryx.ui.activity.MainActivity;
 import com.ryx.ryx.ui.activity.PermissionsActivity;
 import com.ryx.ryx.ui.activity.RegisterActivity;
 import com.ryx.ryx.ui.activity.RetrieveActivity;
+import com.ryx.ryx.ui.activity.SetupActivity;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -105,6 +106,12 @@ public class IntentManager {
    */
     public void  goInfoActivity(Context context) {
         startActivity(context, InfoActivity.class);
+    }
+    /*
+* 跳转找回密码
+*/
+    public void  goSetupActivity(Context context) {
+        startActivity(context, SetupActivity.class);
     }
     /**
      * 跳转到权限授权页面
