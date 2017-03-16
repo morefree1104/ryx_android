@@ -33,6 +33,14 @@ public class DividerGridItemDecoration extends RecyclerView.ItemDecoration {
 
     }
 
+    @Override
+    public void onDrawOver(Canvas c, RecyclerView parent, State state) {
+        super.onDrawOver(c, parent, state);
+
+        drawHorizontal(c, parent);
+        drawVertical(c, parent);
+    }
+
     private int getSpanCount(RecyclerView parent) {
         // 列数
         int spanCount = -1;

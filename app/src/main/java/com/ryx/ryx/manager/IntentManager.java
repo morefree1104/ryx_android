@@ -108,7 +108,7 @@ public class IntentManager {
         startActivity(context, InfoActivity.class);
     }
     /*
-* 跳转找回密码
+* 跳转设置
 */
     public void  goSetupActivity(Context context) {
         startActivity(context, SetupActivity.class);

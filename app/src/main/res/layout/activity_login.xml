@@ -24,7 +24,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_15"
-        app:hintText="请输入注册手机号码/邮箱"
+        app:hintText="请输入密码"
+        app:editType="password"
         app:textDrawable="@mipmap/password_01"
         />
     <Button

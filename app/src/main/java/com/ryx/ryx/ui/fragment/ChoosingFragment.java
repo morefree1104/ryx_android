@@ -10,7 +10,7 @@ public class ChoosingFragment extends BaseFragment{
     @Override
     public void initTop() {
         enableTop(true);
-        enableBack(true,"返回");
+        enableBack(false);
         enableTitle(true,"选课", com.neo.duan.R.color.common_black);
 
 

@@ -10,7 +10,7 @@ public class ScheduleFragment extends BaseFragment {
     @Override
     public void initTop() {
         enableTop(true);
-        enableBack(true,"返回");
+        enableBack(false);
         enableTitle(true,"我的课表", com.neo.duan.R.color.common_black);
 
     }
