@@ -56,26 +56,14 @@ public class LoginActivity extends BaseActivity {
         IntentManager.getInstance().goRegisterActivity(mContext);
     }
 
-    @OnFocusChange(R.id.et_password)
-    public void focus(View v, boolean hasFocus){
-        if (hasFocus) {
-            // 此处为得到焦点时的处理内容
-            ToastUtil.show("huodejiaodian");
-        } else {
-            // 此处为失去焦点时的处理内容
-            ToastUtil.show("shiqu jiaodian");
-        }
+    /**
+     * 点击找回密码
+     * @param view
+     */
+    @OnClick(R.id.tv_forget_password)
+    public void onClickforgetpassword(View view) {
+        IntentManager.getInstance().goRetrieveActivity(mContext);
     }
 
 
-    @OnFocusChange(R.id.et_password_rl)
-    public void focus_rl(View v, boolean hasFocus){
-        if (hasFocus) {
-            // 此处为得到焦点时的处理内容
-            ToastUtil.show("huodejiaodian");
-        } else {
-            // 此处为失去焦点时的处理内容
-            ToastUtil.show("shiqu jiaodian");
-        }
-    }
 }
