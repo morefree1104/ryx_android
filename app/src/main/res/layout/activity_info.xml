@@ -39,25 +39,25 @@
                 fresco:roundAsCircle="true" />
 
             <RelativeLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="@dimen/dp_10"
                 android:layout_toRightOf="@id/iv_business_header_head">
                 <TextView
-                        android:id="@+id/tv_business_header_username"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        tools:text="张小凡"
-                        android:textColor="@color/common_black"
-                        android:textSize="@dimen/sp_14" />
+                    android:id="@+id/tv_business_header_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="张小凡"
+                    android:textColor="@color/common_black"
+                    android:textSize="@dimen/sp_18" />
 
                 <TextView
                     android:id="@+id/iv_renzheng_flag"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="更换头像"
-                    android:textSize="@dimen/sp_12"
+                    android:textSize="@dimen/sp_14"
                     android:layout_alignParentRight="true"
                     android:textColor="@color/price_color"
                     android:layout_gravity="center_vertical"
@@ -77,13 +77,13 @@
                         tools:text="注册日期:"
                         android:layout_marginLeft="@dimen/dp_1"
                         android:textColor="@color/common_gray"
-                        android:textSize="10sp" />
+                        android:textSize="@dimen/sp_14" />
                     <TextView
                         android:id="@+id/tv_dates"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/common_gray"
-                        android:textSize="@dimen/sp_10"
+                        android:textSize="@dimen/sp_14"
                         android:layout_marginLeft="@dimen/dp_2"
                         android:text="2017年3月15日"
                         android:layout_gravity="center_vertical"
@@ -123,13 +123,13 @@
                     android:layout_marginLeft="@dimen/dp_10"
                     android:drawableLeft="@mipmap/hui_01"
                     android:textColor="@color/common_gray"
-                    android:textSize="10sp" />
+                    android:textSize="@dimen/sp_14" />
                 <TextView
                     android:id="@+id/tv_hui"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/orange"
-                    android:textSize="@dimen/sp_12"
+                    android:textSize="@dimen/sp_14"
                     android:text="20元"
                     android:layout_marginRight="@dimen/dp_2"
                     android:layout_marginLeft="@dimen/dp_2"
@@ -139,7 +139,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/common_gray"
-                    android:textSize="@dimen/sp_10"
+                    android:textSize="@dimen/sp_14"
                     android:text="代金劵奖励"
                     android:layout_gravity="center_vertical"
                     />
@@ -156,7 +156,17 @@
             android:layout_height="wrap_content"
             app:hintText="138****8839"
             app:editType="number"
-                app:titleText="手机号码"/>
+            app:titleText="手机号码"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/common_gray_line"/>
+                <com.ryx.ryx.ui.view.InfoEditTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:hintText="小凡凡"
+                    app:editType="number"
+                    app:titleText="用户名"/>
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1px"
@@ -206,7 +216,7 @@
                 android:layout_height="wrap_content"
                 android:weightSum="0"
                 android:background="@color/white"
-                android:paddingTop="@dimen/dp_20"
+                android:paddingTop="@dimen/dp_25"
                 android:paddingBottom="@dimen/dp_40"
                 android:orientation="horizontal"
                 >
@@ -220,7 +230,7 @@
                 android:background="@drawable/selector_common_orange_btn"
                 android:text="提交"
                 android:textColor="@color/common_white"
-                android:textSize="@dimen/sp_16"/>
+                android:textSize="@dimen/sp_14"/>
                 <TextView
                     android:layout_weight="1"
                     android:layout_width="wrap_content"

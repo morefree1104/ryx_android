@@ -5,6 +5,11 @@
     <dimen name="activity_horizontal_margin">64dp</dimen>
     <dimen name="sp_14">12sp</dimen>
     <dimen name="sp_12">10sp</dimen>
+    <dimen name="sp_11">09sp</dimen>
+    <dimen name="sp_13">11sp</dimen>
+    <dimen name="sp_16">14sp</dimen>
+    <dimen name="sp_18">16sp</dimen>
+
     <dimen name="dp_20">16dp</dimen>
     <dimen name="dp_22">18dp</dimen>
 </resources>
