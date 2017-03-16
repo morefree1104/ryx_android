@@ -1,58 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/activity_login"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/common_bg"
     tools:context="com.ryx.ryx.ui.activity.LoginActivity">
-    <RelativeLayout
-        android:layout_marginTop="@dimen/dp_60"
-        android:layout_width="match_parent"
-        android:background="@drawable/login_style"
-        android:layout_marginLeft="@dimen/dp_25"
-        android:layout_marginRight="@dimen/dp_25"
-        android:focusable="true"
-        android:focusableInTouchMode="true"
-        android:layout_height="@dimen/dp_50">
 
-        <EditText
+        <com.ryx.ryx.ui.view.FocusEditTextView
             android:id="@+id/et_account"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="请输入注册手机号码/邮箱"
-            android:textSize="@dimen/sp_12"
-            android:background="@null"
-            android:drawableLeft="@mipmap/account_01"
-            android:drawablePadding="@dimen/dp_10"
-            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_60"
+            app:hintText="请输入注册手机号码/邮箱"
+            app:textDrawable="@mipmap/account_01"
             />
 
-    </RelativeLayout>
-    <RelativeLayout
-        android:id="@+id/et_password_rl"
-        android:layout_marginTop="@dimen/dp_15"
-        android:layout_width="match_parent"
-        android:background="@drawable/login_style"
-        android:layout_marginLeft="@dimen/dp_25"
-        android:layout_marginRight="@dimen/dp_25"
-        android:layout_height="@dimen/dp_50">
 
-        <EditText
-            android:id="@+id/et_password"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="请输入密码"
-            android:textSize="@dimen/sp_12"
-            android:background="@null"
-            android:drawableLeft="@mipmap/password_01"
-            android:drawablePadding="@dimen/dp_10"
-            android:layout_marginLeft="@dimen/dp_10"
-            />
-
-    </RelativeLayout>
-
+        <com.ryx.ryx.ui.view.FocusEditTextView
+        android:id="@+id/et_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_60"
+        app:hintText="请输入注册手机号码/邮箱"
+        app:textDrawable="@mipmap/password_01"
+        />
     <Button
         android:id="@+id/btn_login"
         android:layout_width="match_parent"

@@ -96,7 +96,7 @@ public class IntentManager {
     /*
     * 跳转找回密码
     */
-    public void goRetrieveActivity(Context context) {
+    public void  goRetrieveActivity(Context context) {
         startActivity(context, RetrieveActivity.class);
     }
     /**
