@@ -3,6 +3,7 @@ package com.ryx.ryx.ui.dialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.view.Gravity;
+import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.animation.Animation;
@@ -11,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.neo.duan.utils.StringUtils;
 import com.ryx.ryx.R;
 
 
@@ -36,7 +38,9 @@ public class LoadingDialog extends Dialog  {
 		// 使用ImageView显示动画
 		spaceshipImage.startAnimation(hyperspaceJumpAnimation);
 		tipTextView.setText(msg);// 设置加载信息
-
+		if(StringUtils.isBlank(msg)){
+			tipTextView.setVisibility(View.GONE);
+		}
 //		Dialog loadingDialog = new Dialog(context, R.style.loading_dialog);// 创建自定义样式dialog
 
 		setCancelable(false);// 不可以用“返回键”取消
