@@ -18,8 +18,6 @@
             android:hint="请输入注册手机号码/邮箱"
             android:textSize="@dimen/sp_12"
             android:background="@null"
-            android:drawableLeft="@mipmap/account_01"
-            android:drawablePadding="@dimen/dp_10"
             android:layout_marginLeft="@dimen/dp_10"
             />
 
