@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-   android:background="@color/common_bg"
+    android:background="@color/common_bg"
     tools:context="com.ryx.ryx.ui.activity.LoginActivity">
     <RelativeLayout
         android:layout_marginTop="@dimen/dp_60"
@@ -13,7 +13,8 @@
         android:background="@drawable/login_style"
         android:layout_marginLeft="@dimen/dp_25"
         android:layout_marginRight="@dimen/dp_25"
-        android:descendantFocusability="beforeDescendants"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
         android:layout_height="@dimen/dp_50">
 
         <EditText
@@ -36,7 +37,6 @@
         android:background="@drawable/login_style"
         android:layout_marginLeft="@dimen/dp_25"
         android:layout_marginRight="@dimen/dp_25"
-        android:descendantFocusability="beforeDescendants"
         android:layout_height="@dimen/dp_50">
 
         <EditText

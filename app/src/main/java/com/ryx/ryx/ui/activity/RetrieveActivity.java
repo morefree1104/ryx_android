@@ -1,22 +1,23 @@
-package com.ryx.ryx.ui.fragment;
+package com.ryx.ryx.ui.activity;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 
 import com.neo.duan.mvp.present.BasePresenter;
 import com.ryx.ryx.R;
-import com.ryx.ryx.ui.fragment.base.BaseFragment;
+import com.ryx.ryx.ui.activity.base.BaseActivity;
 
+public class RetrieveActivity extends BaseActivity{
 
-public class ScheduleFragment extends BaseFragment {
 
     @Override
     public void initTop() {
-        enableTop(true);
+        enableTitle(true,"找回密码", com.neo.duan.R.color.common_black);
         enableBack(true,"返回");
-        enableTitle(true,"我的课表", com.neo.duan.R.color.common_black);
-
     }
 
     @Override
-    public void initLayouts() {setContentView(R.layout.fragment_schedule);
+    public void initLayouts() {setContentView(R.layout.activity_retrieve);
 
     }
 

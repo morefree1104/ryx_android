@@ -10,7 +10,9 @@ public class HomeFragment extends BaseFragment{
     @Override
     public void initTop() {
         enableTitle(true,"融易学");
-        enableBack(true,"返回");
+        enableBack(true,R.mipmap.ic_search);
+        enableRightNav(true,R.mipmap.youxiang_01);
+
 
     }
 

@@ -22,10 +22,9 @@ public class MyFragment extends BaseFragment{
 
     @Override
     public void initTop() {
-        enableTitle(true,"我的", com.neo.duan.R.color.common_black);
-        enableRightNav(true,"设置", com.neo.duan.R.color.common_black);
-        enableBack(false);
-
+        enableTitle(true,"我的",com.neo.duan.R.color.common_black);
+        enableBack(true,"返回");
+        enableRightNav(true,"设置",com.neo.duan.R.color.common_black);
     }
 
     @Override

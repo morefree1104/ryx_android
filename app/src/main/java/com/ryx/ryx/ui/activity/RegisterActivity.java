@@ -14,15 +14,8 @@ public class RegisterActivity extends BaseActivity{
 
     @Override
     public void initTop() {
-        enableTitle(true,"融易学", com.neo.duan.R.color.common_black);
-        enableBack(true,"返回");
-        enableRightNav(true,"登录",com.neo.duan.R.color.common_black);
-        setOnNavRightListener(new CommonTitleBarView.OnNavRightListener() {
-            @Override
-            public void onNavRight() {
-                IntentManager.getInstance().goLoginActivity(mContext);
-            }
-        });
+        enableTitle(true, "融易学", com.neo.duan.R.color.common_black);
+        enableBack(true, "返回");
     }
 
     @Override
