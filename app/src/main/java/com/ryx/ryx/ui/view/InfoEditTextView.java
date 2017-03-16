@@ -57,7 +57,6 @@ public class InfoEditTextView extends RelativeLayout {
         editTxt.setText(valueStr);
         editTxt.setInputType(editType);
         titleTv.setText(titleStr);
-
     }
 
 

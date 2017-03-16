@@ -43,7 +43,7 @@ public class FocusEditTextView extends RelativeLayout {
         // 获取自定义属性资源ID
         hintStr = a.getString(R.styleable.FocusEditTextView_hintText);
         textDrawable = a.getDrawable(R.styleable.FocusEditTextView_textDrawable);
-        editType = a.getInt(R.styleable.FocusEditTextView_editType, InputType.TYPE_TEXT_VARIATION_NORMAL);
+        editType = a.getInt(R.styleable.FocusEditTextView_editType, InputType.TYPE_CLASS_TEXT);
         valueStr = a.getString(R.styleable.FocusEditTextView_value);
 
     }
