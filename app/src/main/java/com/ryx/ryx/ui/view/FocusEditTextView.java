@@ -65,6 +65,7 @@ public class FocusEditTextView extends RelativeLayout {
             // 这一步必须要做,否则不会显示.
             textDrawable.setBounds(0, 0, textDrawable.getMinimumWidth(), textDrawable.getMinimumHeight());
             editTxt.setCompoundDrawables(textDrawable,null,null,null);
+            editTxt.setCompoundDrawablePadding(8);
         }
         editTxt.setOnFocusChangeListener(new OnFocusChangeListener() {
             @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)

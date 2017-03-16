@@ -144,22 +144,13 @@
                     />
             </LinearLayout>
 
-            <com.neo.duan.ui.widget.ClickItemView
-                android:id="@+id/clv_change_hangye"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:minHeight="48dp"
-                app:leftText="@string/shoujihao"
-                app:leftTextColor="#333"
-                app:rightTextColor="#666"
-                tools:rightText="@string/shoujihao" />
 
             <com.ryx.ryx.ui.view.InfoEditTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:hintText="138****8839"
                 app:editType="number"
-                app:titleText="手机电话"/>
+                app:titleText="手机号码"/>
 
 
             <com.ryx.ryx.ui.view.InfoTextView
