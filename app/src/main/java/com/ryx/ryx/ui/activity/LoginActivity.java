@@ -18,7 +18,7 @@ public class LoginActivity extends BaseActivity {
 
     @Override
     public void initTop() {
-        enableTitle(true,"融易学", com.neo.duan.R.color.common_black);
+        enableTitle(true,"登录", com.neo.duan.R.color.common_black);
         enableBack(true,"返回");
 
     }

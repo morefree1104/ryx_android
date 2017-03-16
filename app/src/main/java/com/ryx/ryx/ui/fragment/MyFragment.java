@@ -2,6 +2,7 @@ package com.ryx.ryx.ui.fragment;
 
 import android.support.v7.widget.GridLayoutManager;
 import android.view.View;
+import android.widget.RelativeLayout;
 
 import com.neo.duan.mvp.present.BasePresenter;
 import com.neo.duan.ui.widget.recyclerview.DividerGridItemDecoration;
@@ -23,7 +24,7 @@ public class MyFragment extends BaseFragment{
     @Override
     public void initTop() {
         enableTitle(true,"我的",com.neo.duan.R.color.common_black);
-        enableBack(true,"返回");
+        enableBack(false);
         enableRightNav(true,"设置",com.neo.duan.R.color.common_black);
     }
 
@@ -55,6 +56,15 @@ public class MyFragment extends BaseFragment{
         mRecyclerView.setAdapter(mAdapter = new Myadapter(mContext));
 
     }
+    /*
+    * 完善个人信息
+    * @param view
+    */
+    @OnClick(R.id.rl_top)
+    public void onClickrltop(View view) {
+        IntentManager.getInstance().goInfoActivity(mContext);
+    }
+
     /**
      * 点击登录
      * @param view
