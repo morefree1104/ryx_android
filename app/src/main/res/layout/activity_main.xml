@@ -23,7 +23,7 @@
         android:id="@+id/main_tab_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:minHeight="56dp"
+        android:minHeight="51dp"
         android:background="@color/common_white"
         app:bgColorOff="@color/common_white"
         app:bgColorOn="@color/common_white"
