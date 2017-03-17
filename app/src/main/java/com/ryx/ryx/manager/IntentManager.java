@@ -14,8 +14,13 @@ import com.neo.duan.event.base.EventCode;
 import com.neo.duan.utils.ListUtils;
 import com.neo.duan.utils.StringUtils;
 import com.neo.duan.utils.constants.Constants;
+import com.ryx.ryx.ui.activity.InfoActivity;
+import com.ryx.ryx.ui.activity.LoginActivity;
 import com.ryx.ryx.ui.activity.MainActivity;
 import com.ryx.ryx.ui.activity.PermissionsActivity;
+import com.ryx.ryx.ui.activity.RegisterActivity;
+import com.ryx.ryx.ui.activity.RetrieveActivity;
+import com.ryx.ryx.ui.activity.SetupActivity;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -76,6 +81,37 @@ public class IntentManager {
      */
     public void goMainActivity(Context context) {
         startActivity(context, MainActivity.class);
+    }
+
+    /*
+    * 跳转登录
+    */
+    public void goLoginActivity(Context context) {
+        startActivity(context, LoginActivity.class);
+    }
+    /*
+    * 跳转注册
+    */
+    public void goRegisterActivity(Context context) {
+        startActivity(context, RegisterActivity.class);
+    }
+    /*
+    * 跳转找回密码
+    */
+    public void  goRetrieveActivity(Context context) {
+        startActivity(context, RetrieveActivity.class);
+    }
+    /*
+   * 跳转找回密码
+   */
+    public void  goInfoActivity(Context context) {
+        startActivity(context, InfoActivity.class);
+    }
+    /*
+* 跳转设置
+*/
+    public void  goSetupActivity(Context context) {
+        startActivity(context, SetupActivity.class);
     }
     /**
      * 跳转到权限授权页面

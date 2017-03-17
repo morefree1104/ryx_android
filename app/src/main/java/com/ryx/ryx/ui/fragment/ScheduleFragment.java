@@ -11,8 +11,7 @@ public class ScheduleFragment extends BaseFragment {
     public void initTop() {
         enableTop(true);
         enableBack(false);
-        enableTitle(true,"课表");
-     enableRightNav(true, R.mipmap.youxiang_01);
+        enableTitle(true,"我的课表", com.neo.duan.R.color.common_black);
 
     }
 

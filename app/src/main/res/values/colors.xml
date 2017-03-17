@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="color_333">#333333</color>
-    <color name="black_text">#333333</color>
+    <color name="black_text">#4A4A4A</color>
+    <color name="gray_text">#9B9B9B</color>
     <color name="color_999">#999</color>
 
     <color name="search_box_color">#EBECF0</color>
@@ -17,4 +18,6 @@
     <color name="guide1">#00DDC6</color>
     <color name="guide2">#985BD2</color>
     <color name="guide3">#F6B32E</color>
+
+    <color name="alpha0">#00ffffff</color>
 </resources>

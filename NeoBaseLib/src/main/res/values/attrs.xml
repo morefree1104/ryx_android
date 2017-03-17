@@ -20,6 +20,9 @@
         <!-- 右边文本颜色 -->
         <attr name="rightTextColor" format="color" />
 
+        <!-- 右边文本左图标 -->
+        <attr name="rightTextDrawable" format="reference" />
+
     </declare-styleable>
 
 

@@ -4,14 +4,17 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 
+import com.bigkoo.pickerview.OptionsPickerView;
 import com.neo.duan.mvp.present.BasePresenter;
 import com.neo.duan.ui.widget.MainNavTabBarView;
+import com.ryx.ryx.MockService;
 import com.ryx.ryx.R;
 import com.ryx.ryx.ui.activity.base.BaseActivity;
 import com.ryx.ryx.ui.fragment.ChoosingFragment;
 import com.ryx.ryx.ui.fragment.HomeFragment;
 import com.ryx.ryx.ui.fragment.MyFragment;
 import com.ryx.ryx.ui.fragment.ScheduleFragment;
+import com.ryx.ryx.ui.popupwindow.OptionPop;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -137,6 +140,31 @@ public class MainActivity extends BaseActivity implements MainNavTabBarView.OnTa
         //显示当前，其他隐藏
         transaction.show(mCurrentFragment);
         transaction.commitAllowingStateLoss();
+        //测试代码
+        //显示弹出框
+//        testOptionPop();
+        //显示加载中框
+//        showLoading();
+    }
 
+    //弹出框用法
+    public void testOptionPop(){
+        //初始化弹出框
+        final OptionPop pop = new OptionPop(mContext);
+        //设置弹出框标题
+        pop.setTitle("行业选择");
+        //设置参数值
+        pop.setPicker(MockService.mockIndustry());
+        //设置是否循环
+        pop.setCyclic(false);
+        //设置点击确认后的监听事件
+        pop.setOnoptionsSelectListener(new OptionsPickerView.OnOptionsSelectListener() {
+            @Override
+            public void onOptionsSelect(int options1, int option2, int options3) {
+                pop.setSelectOptions(options1);
+            }
+        });
+        //显示弹出框
+        pop.show();
     }
 }

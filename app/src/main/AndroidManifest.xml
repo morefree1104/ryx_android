@@ -53,16 +53,20 @@
             android:theme="@style/Theme.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
         <activity
             android:name=".ui.activity.MainActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
+        <activity android:name=".ui.activity.LoginActivity" />
+        <activity android:name=".ui.activity.RegisterActivity" />
+        <activity android:name=".ui.activity.InfoActivity" />
+        <activity android:name=".ui.activity.RetrieveActivity" />
+        <activity android:name=".ui.activity.SetupActivity"></activity>
     </application>
 
 </manifest>
